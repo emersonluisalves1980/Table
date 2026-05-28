@@ -1,0 +1,287 @@
+:root{
+    --font: 'Manrope', sans-serif;
+    --white: #ffffff;
+    --primary: #464646;
+    --primary-dark: #333333;
+    --bg-body: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-hover: #f3f4f6;
+    --bg-element: #e2e8f0;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --text-secundary: #475569;
+    --text-light: #9ca3af;
+    --border-main: #e5e7eb;
+    --border-input: #d1d5db;
+    --border-hover: #9ca3af;
+    --color-success: #22c55e;
+    --color-success-hover: #16a34a;
+    --badge-ppc-bg: #fefce8;
+    --badge-ppc-text: #854d0e;
+    --badge-ppc-border: #fef08a;
+    --badge-purch-bg: #f0fdf4;
+    --badge-purch-text: #166534;
+    --badge-purch-border: #bbf7d0;
+    --badge-geo-bg: #f3e8ff;
+    --badge-geo-text: #6b21a8;
+    --badge-geo-border: #e9d5ff;
+    --badge-spon-bg: #fff7ed;
+    --badge-spon-text: #9a3412;
+    --badge-spon-border: #ffedd5;
+    --grade-bg-c: #fde047;
+    --grade-text-c: #854d0e;
+    --grade-bg-b: #fef08e;
+    --grade-text-b: #854d0e;
+    --grade-bg-a: #bbf7d0; 
+    --grade-text-a: #14532d;
+    --grade-bg-f: #fca5a5;
+    --grade-text-f: #7f1d1d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: var(--bg-body);
+    color: var(--text-main);
+}
+
+.table-widget{
+    border-radius: 0.5rem;
+    background: var(--bg-surface);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 70rem;
+    box-shadow: 0 4px 6px -1px rgb(0, 0, 0 / 0.1),
+    0 2px 4px -2px rgb(0, 0, 0 / 0.1);
+    border: 1px solid var(--border-main);
+    overflow-x: auto;
+}
+
+.header-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.table-widget h2{
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-count{
+    background: var(--bg-element);
+    color: var(--text-secundary);
+    font-size: 0.85rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+}
+
+.btn-apply{
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-apply:hover{
+    background: var(--primary-dark);
+}
+
+.btn-green{
+    background: var(--color-success);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font);
+    font-size: 0.9rem;
+}
+
+.btn-green:hover{
+    background: var(--color-success-hover);
+}
+/* table Styling */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.625rem; /* 10px */
+    table-layout: fixed;
+}
+
+th{
+    text-align: left;
+    padding: 0.75rem; /* 12px */
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-main);
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td{
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--bg-hover);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tr:hover td{
+    background: var(--bg-body);
+}
+
+th {
+    user-select: none;
+}
+
+th.sortable.sorted-asc::after{
+    content: ' ^';
+    font-size: 0.7em;}
+th.sortable.sorted-desc::after{
+    content: ' v';
+    font-size: 0.7em;
+}
+/* Resizer */
+th.resizable { 
+    position: relative;
+    min-width: 50px; 
+}
+
+/* Columns Specifics */
+.domain-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.domain-icon{
+    width: 1rem;
+    height: 1rem;
+}
+/* Badges */
+.badge-group{
+    display: flex;
+    gap: 0375rem;
+    flex-wrap: wrap;
+}
+
+.badge{
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.badge-ppc{
+    background: var(--badge-ppc-bg);
+    color: var(--badge-ppc-text);
+    border-color: var(--badge-ppc-border);
+}
+
+.badge-purchased{
+    background: var(--badge-purch-bg);
+    color: var(--badge-purch-text);
+    border: 1px solid var(--badge-purch-border);
+/* badges css */
+
+/* ND Grade Box */
+.nd-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+    font-weight: 700;
+}
+
+.nd-grade{
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+}
+
+.grade-c{
+    background: var(--grade-bg-c);
+    color: var(--grade-text-c);
+}
+/* more grades */
+.progress-wrapper{
+    width: 100%;
+    min-width: 5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 0.375rem;
+    background: var(--bg-element);
+    border-radius: 0.1875rem;
+    overflow: hidden;
+}
+
+.fill{
+    height: 100%;
+    background: var(--color-success);
+    border-radius: 0.1875rem;
+}
+/* Grades */
+.grade-a{
+    background: var(--grade-bg-a);
+    color: var(--grade-text-a);
+}
+.grade-b{
+    background: var(--grade-bg-b);
+    color: var(--grade-text-b);
+}
+.grade-c{
+    background: var(--grade-bg-c);
+    color: var(--grade-text-c);
+}
+.grade-f{
+    background: var(--grade-bg-f);
+    color: var(--grade-text-f);
+}
+
+}

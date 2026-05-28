@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="/CSS/Table.css">
+</head>
+
+<body>
+
+<article class="table-widget">
+
+    <div class="header-row">
+        <h2>
+            Competitors
+            <span class="header-count">8</span>
+        </h2>
+
+        <button class="export-btn btn-green" type="button">
+            Download Full List
+        </button>
+    </div>
+
+    <table id="team-table">
+        <thead>
+        <tr>
+            <th class="resizable sortable">Domain</th>
+            <th class="resizable sortable">Traffic</th>
+            <th>Status</th>
+            <th class="sortable">ND</th>
+            <th class="sortable">Country</th>
+            <th class="sortable">SEO</th>
+            <th class="sortable">Paid</th>
+            <th class="sortable">Revenue</th>
+        </tr>
+        </thead>
+
+        <tbody id="team-member-rows">
+        <tr>
+            <td>
+                <div class="domain-wrapper">
+                    <strong>stripe.com</strong>
+                </div>
+            </td>
+            <td>15,402</td>
+            <td>
+                <span class="badge badge-purchased">Purchased</span>
+            </td>
+            <td>
+                <div class="nd-wrapper">
+                    94 <span class="nd-grade grade-a">A</span>
+                </div>
+            </td>
+            <td>US</td>
+            <td>
+                <div class="progress-wrapper">
+                    95%
+                    <div class="progress-bar">
+                        <div class="fill" style="width:95%"></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="progress-wrapper">
+                    88%
+                    <div class="progress-bar">
+                        <div class="fill" style="width:88%"></div>
+                    </div>
+                </div>
+            </td>
+            <td>$5,200</td>
+        </tr>
+        </tbody>
+    </table>
+
+</article>
+
+<script src="/JS/Table.js"></script>
+</body>
+</html>
